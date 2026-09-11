@@ -1,0 +1,16 @@
+# Ultralytics YOLO Dataset Configuration for Side-Scan Sonar Object Detection
+# Dataset: Side-Scan Sonar Object Detection Challenge (SIH)
+
+path: ../public/datasets/side-scan-sonar-object-detection-challenge
+train: train/images
+val: valid/images
+
+# Number of classes
+nc: 4
+
+# Class names mapping
+names:
+  0: Shipwreck
+  1: Marine Debris
+  2: Ghost Net
+  3: Underwater Pipe

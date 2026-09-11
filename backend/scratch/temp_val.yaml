@@ -1,0 +1,11 @@
+
+path: E:/SIH-PROJECT(correct-processing)/FULL-SIH-ANTY/public/datasets/side-scan-sonar-object-detection-challenge
+train: train/images
+val: valid/images
+
+nc: 4
+names:
+  0: Shipwreck
+  1: Marine Debris
+  2: Ghost Net
+  3: Underwater Pipe
