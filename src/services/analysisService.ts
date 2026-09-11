@@ -53,7 +53,8 @@ export interface BackendAnalysisResponse {
   message?: string;
 }
 
-const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8000';
+const rawApiUrl = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = rawApiUrl.replace(/\/+$/, '');
 
 /**
  * Convert dataURL to Blob for multipart upload

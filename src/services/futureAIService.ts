@@ -28,10 +28,14 @@ export interface FutureAIServiceConfig {
   timeoutMs: number;
 }
 
+const defaultBaseUrl = (import.meta as any).env?.VITE_API_URL 
+  ? `${(import.meta as any).env.VITE_API_URL.replace(/\/+$/, '')}/api/v1` 
+  : 'http://localhost:8000/api/v1';
+
 export class FutureAIService {
   private config: FutureAIServiceConfig;
 
-  constructor(config: FutureAIServiceConfig = { apiBaseUrl: 'http://localhost:8000/api/v1', timeoutMs: 30000 }) {
+  constructor(config: FutureAIServiceConfig = { apiBaseUrl: defaultBaseUrl, timeoutMs: 30000 }) {
     this.config = config;
   }
 

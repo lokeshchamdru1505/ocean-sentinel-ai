@@ -172,10 +172,10 @@ export const UploadPage: React.FC = () => {
           {isBackendOnline ? (
             <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-mono font-bold">
               <Server className="w-3.5 h-3.5" />
-              FastAPI AI: Online (localhost:8000)
+              FastAPI AI: Online ({(import.meta as any).env?.VITE_API_URL ? 'Render Cloud' : 'localhost:8000'})
             </span>
           ) : (
-            <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold" title="Start Python FastAPI backend on port 8000 for neural model inference">
+            <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold" title="Python FastAPI backend status for neural model inference">
               <Server className="w-3.5 h-3.5" />
               AI Model: Local Processor
             </span>
