@@ -6,8 +6,8 @@ Inference engine: Ultralytics YOLO (backend/models/best.pt)
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routes.analysis import router as analysis_router
-from backend.services.model_service import get_model_status
+from routes.analysis import router as analysis_router
+from services.model_service import get_model_status
 
 app = FastAPI(
     title="Ocean Sentinel AI - Sonar Detection Backend",
@@ -64,4 +64,4 @@ def model_status():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

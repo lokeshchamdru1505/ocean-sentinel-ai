@@ -20,10 +20,7 @@ from PIL import Image
 import numpy as np
 import torch
 
-try:
-    from backend.services.geolocation_service import resolve_scan_location
-except ImportError:
-    from services.geolocation_service import resolve_scan_location
+from services.geolocation_service import resolve_scan_location
 
 # ---------------------------------------------------------------------------
 # Paths

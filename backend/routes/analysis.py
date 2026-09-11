@@ -5,7 +5,7 @@ Inference engine: Ultralytics YOLO (backend/models/best.pt)
 
 from fastapi import APIRouter, File, UploadFile, Form, HTTPException
 from typing import Optional
-from backend.services.model_service import analyze_sonar_image
+from services.model_service import analyze_sonar_image
 
 router = APIRouter(prefix="/api", tags=["Analysis"])
 
